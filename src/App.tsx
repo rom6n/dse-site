@@ -11,8 +11,8 @@ function App() {
       <NavBar />
       <main className="pb-3">
         <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/request" element={<RequestPage />} />
+          <Route path="/dse-site/" element={<MainPage />} />
+          <Route path="/dse-site/request" element={<RequestPage />} />
         </Routes>
       </main>
       <BackButton />
