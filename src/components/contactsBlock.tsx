@@ -8,12 +8,12 @@ const ContactsBlock = () => {
       <div className="flex flex-col gap-0 bg-black/90 h-50 border-4 border-transparent rounded-3xl w-[95%] items-center justify-end cursor-pointer">
         <div className="flex w-full pl-3 pt-1 pb-1">
           <span className="text-sm font-medium text-white/50">
-            Время работы с XX:XX до XX:XX
+            Время работы с 10:00 до 19:00
           </span>
         </div>
         <a
           className="flex w-full h-14 border-b border-white/80 items-center justify-start bg-sky-500/80 rounded-t-3xl transition-color duration-200 hover:bg-sky-400/80"
-          href="https://t.me/Detailing96?text=Здравствуйте "
+          href="https://t.me/Detailing96?text=Здравствуйте"
         >
           <div className="flex items-center justify-center ml-3 w-9 h-9 fill-white/90">
             <TelegramLogo />

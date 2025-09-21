@@ -22,10 +22,7 @@ function MainPage() {
 
   return (
     <div className="flex flex-col pt-0 items-center w-screen overflow-hidden font-inter text-black/80">
-      <div
-        className="h-80 w-full rounded-b-3xl bg-cover bg-[url('/images/auto.jpg')]"
-        id="top"
-      >
+      <div className="h-80 w-full rounded-b-3xl bg-cover bg-[url('/images/auto.jpg')]">
         <div className="absolute w-full h-80 bg-transparent backdrop-blur-[0px] top-0 rounded-b-[30px]" />
         <div className="absolute top-53 pb-4 pt-4 rounded-[30px] flex items-start pl-5 w-full flex-col text-white/90 text-4xl justify-center z-10">
           <span className="text-start font-bold">Детейлинг</span>
@@ -36,7 +33,7 @@ function MainPage() {
       </div>
       <div className="flex flex-col items-center w-full mt-8">
         <a
-          className="flex items-center justify-center w-[80%] h-15 transition-all duration-200 bg-black/90 rounded-2xl hover:opacity-95 cursor-pointer"
+          className="flex items-center justify-center w-[80%] h-15 transition-all duration-200 bg-black/90 rounded-2xl hover:opacity-93 cursor-pointer"
           style={{ boxShadow: "0 3px 15px #000000" }}
           href="#contacts"
         >
@@ -51,10 +48,10 @@ function MainPage() {
         </a>
       </div>
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.3 }}
         className="flex flex-col items-center justify-center w-full mt-8"
       >
         <div className="w-[95%] text-start bg-black/90 p-3 border-b border-white/50 rounded-t-3xl">
@@ -75,7 +72,7 @@ function MainPage() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.3 }}
         className="flex flex-col items-center justify-center w-full pb-2 mt-12"
       >
         <div className="flex w-full">
@@ -89,7 +86,7 @@ function MainPage() {
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="flex w-full items-center justify-start mt-1.5 transition-transform duration-200 ease-out hover:scale-103"
         >
           <div className="ml-3 p-3.5 pt-1 pb-1 bg-black/90 rounded-full">
@@ -99,10 +96,10 @@ function MainPage() {
       ))}
       <motion.div
         id="contacts"
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.3 }}
         className="flex flex-col items-center justify-center w-full mt-12"
       >
         <div className="flex text-start pb-2 flex-col w-full">
