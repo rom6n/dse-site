@@ -25,7 +25,10 @@ const ContactsBlock = () => {
             {">"}
           </div>
         </a>
-        <a className="flex w-full h-14 border-b border-white/80 items-center justify-start bg-purple-500 transition-color duration-200 hover:bg-purple-400/90">
+        <a
+          className="flex w-full h-14 border-b border-white/80 items-center justify-start bg-purple-500 transition-color duration-200 hover:bg-purple-400/90"
+          href="https://max.ru/u/f9LHodD0cOKG6gdZYTdzzBl4TPzpwo9V4xpuyeAOHtyHmryGwrcH13JxGlA?text=Здравствуйте"
+        >
           <div className="flex items-center justify-center ml-4 w-20 h-10 fill-white/90">
             <MaxLogo />
           </div>
@@ -41,7 +44,7 @@ const ContactsBlock = () => {
             <CallIcon />
           </div>
           <span className="absolute left-17 text-[20px] font-semibold text-white/90">
-            +7 999 999-99-99
+            +7 912 677-60-46
           </span>
         </a>
       </div>

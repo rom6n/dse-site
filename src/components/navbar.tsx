@@ -5,7 +5,7 @@ const NavBar = () => {
     <nav className="fixed flex font-inter top-1 left-2 items-cente inset-x-0 h-12 bg-transparent z-50">
       <Link
         to={"/dse-site/"}
-        className="flex flex-row items-center justify-center w-[30%] h-full cursor-pointer"
+        className="flex flex-row items-center justify-center w-[30%] max-w-30 h-full cursor-pointer"
       >
         <div
           className="flex w-full h-10 items-center justify-center bg-white rounded-full"

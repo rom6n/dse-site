@@ -1,20 +1,32 @@
 import { motion } from "framer-motion";
 import ContactsBlock from "../components/contactsBlock";
+import { useState } from "react";
 
-export interface Advantages {
+export interface NameDescription {
   name: string;
   description: string;
 }
 
 function MainPage() {
-  const whatWeDo = [
-    "Полируем авто",
-    "Убираем вмятины и сколы",
-    "Проводим шумоизоляцию",
-    "Что то добавить...",
+  const [whichWhatWeDoOpen, setWhichWhatWeDoOpen] = useState<number>(0);
+
+  const whatWeDo: NameDescription[] = [
+    {
+      name: "Полируем авто",
+      description: "Посмотреть работы >",
+    },
+    {
+      name: "Убираем вмятины и сколы",
+      description: "Посмотреть работы  >",
+    },
+    {
+      name: "Оклеиваем защитной пленкой",
+      description: "Посмотреть работы  >",
+    },
+    { name: "Что то добавить...", description: "" },
   ];
 
-  const whoWeAre: Advantages[] = [
+  const whoWeAre: NameDescription[] = [
     { name: "Качество", description: "Мы работаем непокладая рук с 2009 года" },
     { name: "Скорость", description: "Уже скоро ваш авто будет как-новый" },
     { name: "Доступность", description: "Нет космических цен" },
@@ -81,7 +93,7 @@ function MainPage() {
           </span>
         </div>
       </motion.div>
-      {whatWeDo.map((value) => (
+      {whatWeDo.map((value, idx) => (
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -89,9 +101,25 @@ function MainPage() {
           viewport={{ once: true, amount: 0.3 }}
           className="flex w-full items-center justify-start mt-1.5 transition-transform duration-200 ease-out hover:scale-103"
         >
-          <div className="ml-3 p-3.5 pt-1 pb-1 bg-black/90 rounded-full">
-            <span className="text-xl font-semibold text-white/90">{value}</span>
-          </div>
+          <button
+            className={`flex flex-col overflow-hidden text-start ml-3 ${
+              whichWhatWeDoOpen === idx + 1 ? "h-15" : "h-9"
+            } p-3.5 pt-1 pb-1 transition-all duration-300 bg-black/90 rounded-xl cursor-pointer`}
+            onClick={() => {
+              if (whichWhatWeDoOpen !== idx + 1) {
+                setWhichWhatWeDoOpen(idx + 1);
+                return;
+              }
+              setWhichWhatWeDoOpen(0);
+            }}
+          >
+            <span className="text-xl font-semibold text-white/90">
+              {value.name}
+            </span>
+            <span className="text-sm font-medium transition-colors duration-200 text-white/50 hover:text-blue-500">
+              {value.description}
+            </span>
+          </button>
         </motion.div>
       ))}
       <motion.div
